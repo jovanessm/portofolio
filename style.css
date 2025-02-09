@@ -1,22 +1,22 @@
-body{
-    background-color: #607EAA; /* Milder Blue*/
+body {
+    background-color: #607eaa; /* Milder Blue*/
 }
-.intro{
-    background-color: #F3F3E0; /* beige */
+.intro {
+    background-color: #f3f3e0; /* beige */
 }
 
-.font-navy{
-    color : #133E87; 
+.font-navy {
+    color: #133e87;
 }
 
 .pt-serif-regular {
     font-family: "PT Serif", serif;
-    font-weight: 400; 
-    font-style: normal;  
-}     
+    font-weight: 400;
+    font-style: normal;
+}
 
-.pt-serif-regular-italic {  
-    font-family: "PT Serif", serif;  
+.pt-serif-regular-italic {
+    font-family: "PT Serif", serif;
     font-weight: 400;
     font-style: italic;
 }
@@ -63,47 +63,67 @@ body{
     font-style: normal;
 }
 
-.p-capsule{
-    border : solid #EAE3D2 10px;
+.p-capsule {
+    border: solid #eae3d2 10px;
     font-weight: bold;
-    padding : 5px;
+    padding: 5px;
     border-radius: 15%;
 }
 
-@keyframes slide-from-left{
+@keyframes slide-from-left {
     0% {
-    transform: translateX(-70%);
-    opacity: 0.5;
+        transform: translateX(-50%);
+        opacity: 0.5;
     }
     35% {
-    transform: translateX(0%);
-    opacity: 1;
+        transform: translateX(0%);
+        opacity: 1;
     }
-    70%{
-    transform: translateX(0%);   
-    opacity: 1; 
+    70% {
+        transform: translateX(0%);
+        opacity: 1;
     }
     100% {
-    transform: translateX(70%);
-    opacity: 0.5;
+        transform: translateX(50%);
+        opacity: 0.5;
     }
 }
 
-
-.translate{
-    @media(min-width : 992px){
-        animation : slide-from-left linear;
-        animation-timeline : view();
+@keyframes slide-up {
+    0% {
+        transform: translateY(40%);
+        opacity: 0.5;
     }
-    
+    35% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
 }
-.d-flex.flex-column{
-    @media(max-width : 992px){
+
+.translate-left {
+    @media (min-width: 992px) {
+        animation: slide-from-left linear;
+        animation-timeline: view();
+    }
+}
+
+.translate-up {
+    @media (min-width: 992px) {
+        animation: slide-up linear;
+        animation-timeline: view();
+    }
+}
+.d-flex.flex-column {
+    @media (max-width: 992px) {
         gap: 40px;
     }
 }
 
-.card{
+.card {
     background-color: transparent;
     border-color: transparent;
 }
