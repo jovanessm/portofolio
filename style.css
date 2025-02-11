@@ -91,3 +91,22 @@ body {
     background-color: transparent;
     border-color: transparent;
 }
+
+.infiniteCarouselContainer > img {
+    max-width: 4rem;
+    margin: 1rem;
+    animation-name: spin;
+    animation-duration: 13s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-66rem);
+    }
+}
