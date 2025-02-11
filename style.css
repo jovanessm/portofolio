@@ -15,28 +15,10 @@ body {
     font-style: normal;
 }
 
-.pt-serif-regular-italic {
-    font-family: "PT Serif", serif;
-    font-weight: 400;
-    font-style: italic;
-}
-
-.pt-serif-bold {
-    font-family: "PT Serif", serif;
-    font-weight: 700;
-    font-style: normal;
-}
-
 .pt-serif-bold-italic {
     font-family: "PT Serif", serif;
     font-weight: 700;
     font-style: italic;
-}
-
-.hind-madurai-light {
-    font-family: "Hind Madurai", serif;
-    font-weight: 300;
-    font-style: normal;
 }
 
 .hind-madurai-regular {
@@ -45,29 +27,30 @@ body {
     font-style: normal;
 }
 
-.hind-madurai-medium {
-    font-family: "Hind Madurai", serif;
-    font-weight: 500;
-    font-style: normal;
-}
-
-.hind-madurai-semibold {
-    font-family: "Hind Madurai", serif;
-    font-weight: 600;
-    font-style: normal;
-}
-
-.hind-madurai-bold {
-    font-family: "Hind Madurai", serif;
-    font-weight: 700;
-    font-style: normal;
-}
-
 .p-capsule {
     border: solid #eae3d2 10px;
     font-weight: bold;
     padding: 5px;
     border-radius: 15%;
+}
+
+.slide-carousel {
+    @media (min-width: 992px) {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0.5;
+        transition: transform 0.3s, opacity 0.3s;
+    }
+}
+.slide-in {
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+.slide-out {
+    transform: translateX(50%);
+    opacity: 0.5;
 }
 
 @keyframes slide-from-left {
@@ -106,7 +89,7 @@ body {
 
 .translate-left {
     @media (min-width: 992px) {
-        animation: slide-from-left linear;
+        animation: slide-from-left;
         animation-timeline: view();
     }
 }
