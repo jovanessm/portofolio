@@ -34,25 +34,6 @@ body {
     border-radius: 15%;
 }
 
-.slide-carousel {
-    @media (min-width: 992px) {
-        position: fixed;
-        left: 50%;
-        transform: translateX(-50%);
-        opacity: 0.5;
-        transition: transform 0.3s, opacity 0.3s;
-    }
-}
-.slide-in {
-    transform: translateX(0%);
-    opacity: 1;
-}
-
-.slide-out {
-    transform: translateX(50%);
-    opacity: 0.5;
-}
-
 @keyframes slide-from-left {
     0% {
         transform: translateX(-50%);
