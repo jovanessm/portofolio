@@ -3,6 +3,7 @@ body {
 }
 .intro {
     background-color: #f3f3e0; /* beige */
+    border-radius: var(--bs-border-radius) !important;
 }
 
 .font-navy {
@@ -25,13 +26,6 @@ body {
     font-family: "Hind Madurai", serif;
     font-weight: 400;
     font-style: normal;
-}
-
-.p-capsule {
-    border: solid #eae3d2 10px;
-    font-weight: bold;
-    padding: 5px;
-    border-radius: 15%;
 }
 
 @keyframes slide-from-left {
@@ -109,4 +103,60 @@ body {
     to {
         transform: translateX(-66rem);
     }
+}
+
+@keyframes riseUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+@keyframes riseDown {
+    from {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+.TypeForSpeedInfo {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    translate: -50%;
+    height: 80vh;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+.toggleButton{
+    border: 0;
+    background-color: #f3f3e0;
+}
+
+.toggleButton > img {
+    transition: ease-out 0.4s;
+}
+
+.toggleButton > img:hover {
+    transform: translateY(-5%);
+    opacity: 0.8;
+}
+
+.show {
+    animation-name: riseUp;
+    display: visible;
+}
+
+.hide {
+    animation-name: riseDown;
 }
