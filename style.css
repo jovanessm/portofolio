@@ -22,9 +22,10 @@ body {
     font-style: italic;
 }
 
-.hind-madurai-regular {
+body {
     font-family: "Hind Madurai", serif;
-    font-weight: 400;
+    font-size: large;
+    font-weight: 500;
     font-style: normal;
 }
 
@@ -138,7 +139,7 @@ body {
     animation-iteration-count: 1;
 }
 
-.toggleButton{
+.toggleButton {
     border: 0;
     background-color: #f3f3e0;
 }
@@ -159,4 +160,14 @@ body {
 
 .hide {
     animation-name: riseDown;
+}
+
+.anchor {
+    display: block;
+    width: 10rem;
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    text-align: center;
+    position: relative;
 }
